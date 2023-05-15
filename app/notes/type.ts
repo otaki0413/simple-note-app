@@ -5,9 +5,8 @@ export const zNote = z.object({
   title: z.string(),
   body: z.string(),
   createdAt: z.string().datetime(),
-  uddatedAt: z.string().datetime(),
+  updatedAt: z.string().datetime(),
 });
-
 export const zNotes = z.array(zNote);
 export const zUpsertNote = z.object({
   title: z.string(),
