@@ -27,7 +27,7 @@ const Page = () => {
               {/* ノート一覧・作成ページは未実装のためトップページに遷移 */}
               <div className="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-2.5">
                 <Link
-                  href="/"
+                  href="/notes/new"
                   className="inline-block bg-pink-500 hover:bg-pink-600 active:bg-pink-700 focus-visible:ring ring-pink-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
                 >
                   Add new
