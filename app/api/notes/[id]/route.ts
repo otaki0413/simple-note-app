@@ -8,12 +8,13 @@ import { NextRequest, NextResponse } from "next/server";
 // ノート詳細を取得するAPI
 export async function GET(
   _req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: { id: number } }
 ) {
   const note = await prisma.note.findUnique({
     where: { id: Number(params.id) },
   });
 
+  // ノートが存在しない場合404を返す
   if (note === null) {
     return new NextResponse(null, { status: 404 });
   }
